@@ -177,7 +177,7 @@
             <img class="experience__img" src="assets/decodificador.png">
             <div class="experience__info"
                 <h2 class="experience__title">Decodificador de texto</h2>
-                <h3 class="experience__text">Challenge Alura Codificador </h3>
+                <h3 class="experience__text">Challenge Alura Codificador</h3>
                     <div class="experience__description">
                             <span class="experience__repo"><a href="https://github.com/santiagosegre/challenge-one-decodificador-de-texto"><button class="experiencia__botao--repo">Repositório</button></a></span>
                             <span class="experience__demo"><a href="https://santiagosegre.github.io/challenge-one-decodificador-de-texto/"><button class="experiencia__botao--demo">Ver demo</button></a></span>
@@ -190,7 +190,7 @@
             <img class="experience__img" src="assets/copa_do_mundo.png">
             <div class="experience__info"
                 <h2 class="experience__title">Jogo criado com HTML, CSS e JavaScript</h2>
-                <h3 class="experience__text">Challenge Oracle </h3>
+                <h3 class="experience__text">Copa do Mundo 2022</h3>
                     <div class="experience__description">
                         <!-- Insira a link para demonstração do projeto no Github e/ou GithubPages -->
                             <span class="experience__repo"><a href="https://github.com/santiagosegre/calendario-copa-do-mundo-2022"><button class="experiencia__botao--repo">Repositório</button></a></span>
@@ -212,12 +212,25 @@
                 Preencha o formulário ao lado e entrarei em contato o mais rápido possível. </h3>
                 <form class="formcontato__form">
                     <div>
-                        <label for="nome" class="formcontato__label">Nome</label>
                         <input class="formcontato__input" type="text" id="nome" placeholder="Nome">
+                        <label for="nome" class="formcontato__label">Nome</label>
                     </div>
-                    <input class="formcontato__input" type="email" id="email" placeholder="E-mail">
-                    <input class="formcontato__input" type="text" id="assunto" placeholder="Assunto">
-                    <textarea class="formcontato__textarea" rows="5" cols="40" id="mensagem" name="mensagem" placeholder="Mensagem"></textarea>
+
+                    <div>
+                        <input class="formcontato__input" type="email" id="email" placeholder="E-mail">
+                        <label for="email" class="formcontato__label">E-mail</label>
+                    </div>
+
+                    <div>
+                        <input class="formcontato__input" type="text" id="assunto" placeholder="Assunto">
+                        <label for="assunto" class="formcontato__label">Assunto</label>
+                    </div>
+
+                    <div>
+                        <textarea class="formcontato__textarea formcontato__input" rows="5" cols="40" id="mensagem" name="mensagem" placeholder="Mensagem"></textarea>
+                    
+                    </div>
+
                     <button class="formcontato__botao">Enviar mensagem</button>
                 </form>
             </div>
@@ -234,6 +247,24 @@
     </div>
     <!-- Script Linkado do seu documento de JavaScript -->
 <script src="validate.js"></script>
+<script>
+    // Obtenha uma referência para o campo de entrada e o rótulo
+    const inputs = document.querySelectorAll('.formcontato__input');
+const labels = document.querySelectorAll('.formcontato__label');
+  
+    // Adicione um manipulador de eventos para o evento 'input' do campo de entrada
+    inputs.forEach((input, index) => {
+  input.addEventListener('input', () => {
+    if (input.value.trim() !== '') {
+      labels[index].classList.add('formcontato__label--active');
+    } else {
+      labels[index].classList.remove('formcontato__label--active');
+    }
+  });
+});
+
+  </script>
+  
 </body>
 </html>
 
